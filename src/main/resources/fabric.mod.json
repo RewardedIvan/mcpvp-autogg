@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mcpvp-autogg",
+  "version": "${version}",
+  "name": "mcpvp-autogg",
+  "description": "auto gg for mcpvp.club",
+  "authors": [],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "assets/mcpvp-autogg/icon.png",
+  "environment": "client",
+  "entrypoints": {},
+  "mixins": [
+    "mcpvp-autogg.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
