@@ -1,0 +1,9 @@
+{
+  "mcpvp-autogg.config.title": "mcpvp.club autogg",
+  "mcpvp-autogg.config.category": "autogg configuration",
+  "mcpvp-autogg.config.enabled": "enabled",
+  "mcpvp-autogg.config.chathistory": "add to chat history",
+  "mcpvp-autogg.config.win": "win message",
+  "mcpvp-autogg.config.lose": "lose message",
+  "mcpvp-autogg.config.draw": "draw message"
+}

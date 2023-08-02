@@ -2,14 +2,21 @@
   "schemaVersion": 1,
   "id": "mcpvp-autogg",
   "version": "${version}",
-  "name": "mcpvp-autogg",
+  "name": "mcpvp autogg",
   "description": "auto gg for mcpvp.club",
-  "authors": [],
-  "contact": {},
+  "authors": [
+    "RewardedIvan"
+  ],
+  "contact": {
+    "website": "https://modrinth.com/mods/mcpvp-autogg",
+    "repo": "https://github.com/RewardedIvan/mcpvp-autogg"
+  },
   "license": "AGPL-3.0",
   "icon": "assets/mcpvp-autogg/icon.png",
   "environment": "client",
-  "entrypoints": {},
+  "entrypoints": {
+    "modmenu": [ "me.rewardedivan.mcpvpautogg.config.ModMenuBridge" ]
+  },
   "mixins": [
     "mcpvp-autogg.mixins.json"
   ],
