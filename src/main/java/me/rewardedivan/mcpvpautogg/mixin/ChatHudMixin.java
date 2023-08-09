@@ -22,11 +22,13 @@ public abstract class ChatHudMixin {
     private void addMessage(Text message, MessageSignatureData signature, int ticks, MessageIndicator indicator, boolean refresh, CallbackInfo ci) {
         if (Config.get(Config.ENABLED) == NbtByte.of(false)) return;
 
-        if (message.getString().startsWith("Winners: NONE! ")) {
+        //System.out.println("substr: \"" + message.getString().substring(8) + "\"" + ", displayName: \"" + " " + client.player.getName().getString() + "\"");
+
+        if (message.getString().startsWith("Winner: NONE! ")) {
             if (Config.get(Config.DRAW_MSG).asString() != "")
                 sendPlayerMsg(Config.get(Config.DRAW_MSG).asString());
         } else if (message.getString().startsWith("Winners: ")) {
-            if (message.getString().substring(8).contains(" " + client.player.getDisplayName().getString())) { // use the space to prevent "somewhat matching" names, this will work on 2v2s+
+            if (message.getString().substring(8).contains(" " + client.player.getName().getString())) { // use the space to prevent "somewhat matching" names, this will work on 2v2s+
                 if (Config.get(Config.WIN_MSG).asString() != "")
                     sendPlayerMsg(Config.get(Config.WIN_MSG).asString());
             } else if (Config.get(Config.LOSE_MSG).asString() != "") {
